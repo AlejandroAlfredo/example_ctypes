@@ -1,0 +1,7 @@
+.vscode
+.idea
+# codeblocks
+src/**/bin
+src/**/obj
+src/**/*.depend
+src/**/*.layout
