@@ -1,12 +1,12 @@
 #include <iostream>
 #include "pch.h"
 
-void MessageFunction(char *sometext)
+void MessageFunction(LPCSTR sometext)
 {
     MessageBoxA(0, sometext, "DLL Message", MB_OK | MB_ICONINFORMATION);
 }
 
-void OutputConsole(LPTSTR sometext)
+void OutputConsole(LPCSTR sometext)
 {
     std::cout << "Output: " << sometext << std::endl;
 }
@@ -25,16 +25,9 @@ double CircleArea(double r)
     return PI * pow(r, 2);
 }
 
-char *ReverseString(char *sometext)
+LPCSTR ReverseString(LPCSTR sometext)
 {
     std::string mytext = sometext;
     reverse(mytext.begin(), mytext.end());
-    char *value = "";
-    std::string::iterator iter;
-    for (iter = mytext.begin(); iter != mytext.end(); iter++)
-    {
-        value += *iter;
-    }
-
-    return value;
+    return mytext.c_str();
 }

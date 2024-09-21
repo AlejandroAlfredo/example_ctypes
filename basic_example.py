@@ -22,9 +22,10 @@ print(f"The area of the circle is: {answer}")
 dll_example.ReverseString.restype = ctypes.c_char_p
 dll_example.ReverseString.argtypes = [ctypes.c_char_p]
 answer = dll_example.ReverseString(b"python")
+print("Reverse: ", answer)
 # Try this:
 # answer = dll_example.ReverseString(b'hello_world')
-dll_example.OutputConsole(answer)
+# print("Reverse: ", answer)
 
 dll_example.MessageFunction.argtypes = [ctypes.c_char_p]
 dll_example.MessageFunction(b"Hello Windows")
