@@ -5,3 +5,6 @@ src/**/bin
 src/**/obj
 src/**/*.depend
 src/**/*.layout
+# cmake
+build/
+out/
