@@ -1,10 +1,10 @@
-.vscode
-.idea
-# codeblocks
-src/**/bin
-src/**/obj
-src/**/*.depend
-src/**/*.layout
+/**/.vscode
+/**/.idea
+/**/.vs
+
 # cmake
-build/
-out/
+/**/build/
+/**/out/
+
+# others
+command.bat

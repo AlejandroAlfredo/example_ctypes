@@ -2,10 +2,13 @@ import ctypes
 
 # Library Access
 dll_example = ctypes.cdll.LoadLibrary(r"lib/dll_example.dll")
+
 # Declare the type of value that our function returns
-dll_example.Factorial.restype = ctypes.c_int
+dll_example.Factorial.restype = ctypes.c_int 
+
 # Declare parameter types
 dll_example.Factorial.argtypes = [ctypes.c_int]
+
 # Now we can use the Factorial function
 answer = dll_example.Factorial(10)
 print(f"Factorial: {answer}")  # 3628800
@@ -21,11 +24,9 @@ print(f"The area of the circle is: {answer}")
 
 dll_example.ReverseString.restype = ctypes.c_char_p
 dll_example.ReverseString.argtypes = [ctypes.c_char_p]
-answer = dll_example.ReverseString(b"python")
-print("Reverse: ", answer)
-# Try this:
-# answer = dll_example.ReverseString(b'hello_world')
-# print("Reverse: ", answer)
+answer: bytes = dll_example.ReverseString(b"Hello world")
+print(f"Reverse: {answer.decode()}")
 
-dll_example.MessageFunction.argtypes = [ctypes.c_char_p]
-dll_example.MessageFunction(b"Hello Windows")
+# Try this:
+# dll_example.MessageFunction.argtypes = [ctypes.c_char_p]
+# dll_example.MessageFunction(b"Hello Windows")
