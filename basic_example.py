@@ -1,7 +1,8 @@
 import ctypes
 
 # Library Access
-dll_example = ctypes.cdll.LoadLibrary(r"lib/dll_example.dll")
+# You can also use the library made in c
+dll_example = ctypes.cdll.LoadLibrary(r"lib/example_cpp.dll")
 
 # Declare the type of value that our function returns
 dll_example.Factorial.restype = ctypes.c_int 
@@ -22,9 +23,9 @@ dll_example.CircleArea.argtypes = [ctypes.c_double]
 answer = dll_example.CircleArea(15)
 print(f"The area of the circle is: {answer}")
 
-dll_example.ReverseString.restype = ctypes.c_char_p
-dll_example.ReverseString.argtypes = [ctypes.c_char_p]
-answer: bytes = dll_example.ReverseString(b"Hello world")
+dll_example.ReverseText.restype = ctypes.c_char_p
+dll_example.ReverseText.argtypes = [ctypes.c_char_p]
+answer: bytes = dll_example.ReverseText(b"Hello world!")
 print(f"Reverse: {answer.decode()}")
 
 # Try this:

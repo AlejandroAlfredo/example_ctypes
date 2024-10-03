@@ -11,18 +11,14 @@
 #define DLL_EXPORT __declspec(dllimport)
 #endif
 
-#ifndef PI
-#define PI 3.1416
-#endif // PI
+DLL_EXPORT void MessageFunction(char *sometext);
 
-DLL_EXPORT void MessageFunction(char* sometext);
-
-DLL_EXPORT void OutputConsole(char* sometext);
+DLL_EXPORT void OutputConsole(char *sometext);
 
 DLL_EXPORT int Factorial(int number);
 
 DLL_EXPORT double CircleArea(double r);
 
-DLL_EXPORT char* ReverseString(char* sometext);
+DLL_EXPORT char *ReverseText(char *sometext);
 
 #endif // PCH_H

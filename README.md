@@ -17,4 +17,4 @@ https://docs.python.org/3/library/ctypes.html#fundamental-data-types
 
 _Here I show basic examples:_ _[basic_examples.py](basic_example.py)_
 
-_You can find the DLLs source code here:_ _[dll_example](src/dll_example/)_
+_You can find the DLLs source code here:_ _[dll_example](src/)_

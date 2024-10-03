@@ -24,7 +24,7 @@ double CircleArea(double r)
 	return PI * pow(r, 2);
 }
 
-char* ReverseString(char* sometext)
+char* ReverseText(char* sometext)
 {
 	size_t size = strlen(sometext);
 	char* mytext = (char*)calloc((size + 1), sizeof(char));
@@ -46,4 +46,29 @@ char* ReverseString(char* sometext)
 		return result;
 	}
 
+}
+
+
+BOOL APIENTRY DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
+{
+	switch (fdwReason)
+	{
+	case DLL_PROCESS_ATTACH:
+		// attach to process
+		// return FALSE to fail DLL load
+		break;
+
+	case DLL_PROCESS_DETACH:
+		// detach from process
+		break;
+
+	case DLL_THREAD_ATTACH:
+		// attach to thread
+		break;
+
+	case DLL_THREAD_DETACH:
+		// detach from thread
+		break;
+	}
+	return TRUE; // succesful
 }
